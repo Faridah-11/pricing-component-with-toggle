@@ -1,0 +1,242 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+body{
+    position: relative;
+    height: 100vh;
+    background: #F7F7FE;
+    text-align: center;
+    overflow-y: hidden;
+}
+svg{
+    fill: #F7F7FE;
+    margin-top: 0;
+    z-index: -1;
+}
+svg.bg-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(10em);
+    transform: translateY(-6em);
+    /* transform: scaleX(0.9); */
+
+    width: 25vw;
+    height: 40em;
+    flex-shrink: 0;
+}
+svg.bg-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 30vw;
+    height: 60vh;
+}
+div.container{
+    width: 80%;
+    margin:  0 auto;
+    z-index: 2;
+}
+div.container h2{
+    margin-top: 2em;
+    margin-bottom: 1.2em;
+    color: #6E728E;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+div.plan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.7em;
+    margin-top: 1em;
+    color: #6E728E;
+}
+div.plan h5{
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 186.667% */
+}
+.toggle-btn{
+    width: 56px;
+    height: 32px;
+    transition:2s ease-in-out linear;
+    fill: #a2a7f0;
+}
+.toggle-btn:hover{
+    cursor: pointer;
+    fill: rgb(162, 167, 240, 0.5);
+}
+div.cards{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 3em;
+    z-index: 3;
+}
+button:hover{
+    cursor: pointer;
+}
+.card{
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0px 20px 40px 0px rgba(212, 210, 244, 0.50);
+    padding: 2.6em;
+    width: 34%;
+}
+.card h3{
+    color: #6E728E;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+}
+.card .price{
+    color: #4A4D60;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 71px; /* 98.611% */
+    letter-spacing: -2.16px;
+    margin-bottom: 0.3em;
+}
+.card button{
+    height: 44px;
+    width: 100%;
+    margin-top: 1em;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #A2A7F0 0%, #696EDD 100%);
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.393px;
+}
+.card button:hover{
+    border: 1px solid #6D72DE;
+    color: #6D72DE;
+    background: #FFF;
+}
+.property h4{
+    color: #6E728E;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 186.667% */
+    border-bottom: rgba(110, 114, 142, 0.25) 1px solid;
+    padding: 0.3em;
+}
+.property h4:first-child{
+    border-top: rgba(110, 114, 142, 0.25) 1px solid;
+}
+.highlight{
+    border-radius: 10px;
+    background: linear-gradient(135deg, #A2A7F0 -0.05%, #696EDD 100.05%);
+    box-shadow: 0px 20px 40px 0px rgba(212, 210, 244, 0.50);
+    transform: scale(1.1);
+    color: #fff;
+}
+.highlight h3{
+    color: #fff;
+}
+.highlight .price{
+    color: #fff;
+    margin-bottom: 0.3em;
+}
+.highlight section.property h4{
+    color: #fff;
+    border-bottom: 1px rgba(255, 255, 255, 0.25) solid;
+}
+.highlight .property h4:first-child{
+    border-top: rgba(255, 255, 255, 0.25) 1px solid;
+}
+.highlight button{
+    background: #fff;
+    color: #6D72DE;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.393px;
+    text-transform: uppercase;
+}
+.highlight button:hover{
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+.hidden{
+    display: none;
+}
+@media (min-width: 481px) and (max-width: 1056px) {
+    body{
+        overflow-y: scroll;
+    }
+    div.container{
+        width: 80%;
+    }
+    div.cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 3em;
+        z-index: 3;
+        gap: 1.2em;
+    }
+    .card{
+        width: 100%;
+        padding: 2em;
+    }
+    .highlight{
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        overflow-y: scroll;
+    }
+    svg.bg-top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45vw;
+    }
+    svg.bg-bottom{
+        display: none;
+    }
+    div.container{
+        width: 90%;
+        margin:  0 auto;
+        z-index: 2;
+    }
+    div.container h2{
+        margin-top: 1.5em;
+        margin-bottom: 0.8em;
+    }
+    div.cards{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 3em;
+        z-index: 3;
+        gap: 1.2em;
+    }
+    .card{
+        width: 100%;
+    }
+    .highlight{
+        transform: scale(1.0);
+    }
+}

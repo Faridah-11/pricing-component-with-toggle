@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | [Pricing component with toggle]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 3em;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<svg class="bg-top">
+    <use xlink:href ="images/bg-top.svg#bg-top"></use>
+</svg>
+<svg class="bg-bottom">
+    <use xlink:href ="images/bg-bottom.svg#bg-bottom"></use>
+</svg>
+<div class="container">
+    <h2>Our Pricing</h2>
+    <div class="plan">
+      <h5>Annually</h5>
+      <div class="toggle-btn-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="32" viewBox="0 0 56 32" fill="none" class="toggle-btn">
+          <rect width="56" height="32" rx="16"/>
+          <circle cx="40" cy="16" r="12" fill="white"/>
+          <defs>
+            <linearGradient id="paint0_linear_0_114" x1="-28" y1="16" x2="-0.430769" y2="64.2462" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#A2A7F0"/>
+              <stop offset="1" stop-color="#696EDD"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="32" viewBox="0 0 56 32" fill="none" class="toggle-btn hidden">
+          <rect width="56" height="32" rx="16"/>
+          <circle cx="17" cy="16" r="12" fill="white"/>
+          <defs>
+            <linearGradient id="paint0_linear_0_453" x1="-28" y1="16" x2="-0.430769" y2="64.2462" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#A2A7F0"/>
+              <stop offset="1" stop-color="#696EDD"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h5>Monthly</h5>
+    </div>
+
+  <div class="cards"> 
+    <article class="card">
+      <h3 class="title">Basic</h3>
+      <h4 class="price"> &dollar;19.99</h4>
+      <h4 class="price hidden"> &dollar;199.99</h4>
+      <section class="property">
+        <h4>500 GB Storage</h4>
+        <h4>2 Users Allowed</h4>
+        <h4>Send up to 3 GB</h4>
+      </section>
+      <button>Learn More</button>
+    </article>
+
+    <article class="card highlight">
+      <h3 class="title">Professional</h3>
+      <h4 class="price"> &dollar;24.99</h4>
+      <h4 class="price hidden"> &dollar;249.99</h4>
+      <section class="property">
+        <h4>1 TB Storage</h4>
+        <h4>5 Users Allowed</h4>
+        <h4>Send up to 10 GB</h4>
+      </section>
+      <button>Learn More</button>
+    </article>
+
+    <article class="card">
+      <h3 class="title">Master</h3>
+      <h4 class="price">&dollar;39.99</h4>
+      <h4 class="price hidden">&dollar;399.99</h4>
+      <section class="property">
+        <h4>2 TB Storage</h4>
+        <h4>10 Users Allowed</h4>
+        <h4>Send up to 20 GB</h4>
+      </section>
+      <button>Learn More</button>
+    </article>
+  </div>
+</div>
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Faridah-11</a>.
+  </div>
+</body>
+<script src="script.js"></script>
+</html>
